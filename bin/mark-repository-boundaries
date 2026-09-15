@@ -1,0 +1,14 @@
+#!/bin/sh
+# Recreate the repository boundaries the checkout cannot carry.
+#
+# The engines resolve an instance by walking upward from the working directory
+# and stopping at the first directory that holds a `.git`, so a self-contained
+# test instance needs its archive and its two engine stubs to look like
+# repositories. Git refuses to track any path with a `.git` component, so a
+# clone lacks them; run this once after cloning.
+set -eu
+cd "$(dirname "$0")/.."
+for boundary in clips engines/brain engines/clips; do
+  [ -e "$boundary/.git" ] || git init -q "$boundary"
+done
+mkdir -p atrium conversations

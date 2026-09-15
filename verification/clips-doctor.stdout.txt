@@ -1,0 +1,7 @@
+PASS configuration: valid
+PASS paths: all present
+PASS repositories: valid Git identities
+PASS archive: no public engine remote
+PASS api: supported
+PASS executables: 0 missing
+PASS credentials: CAPTURE_TOKEN not required

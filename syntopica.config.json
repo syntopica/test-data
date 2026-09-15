@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "instanceId": "synthetic-test",
+  "brain": {
+    "pages": [
+      "brain/notes"
+    ],
+    "sources": "brain/captures",
+    "index": "brain/index.md",
+    "ledger": "brain/.ingest"
+  },
+  "clips": {
+    "archive": "clips"
+  },
+  "atrium": {
+    "path": "atrium"
+  },
+  "conversations": {
+    "path": "conversations"
+  },
+  "engines": {
+    "brain": {
+      "path": "engines/brain",
+      "apiVersion": 1
+    },
+    "clips": {
+      "path": "engines/clips",
+      "apiVersion": 1
+    }
+  }
+}
