@@ -37,5 +37,8 @@ SYNTOPICA_DATA=$PWD clips doctor
 - `engines/brain/schema/` is a snapshot of the engine's configuration schema;
   refresh it from `syntopica/brain` when the schema changes.
 - `.config/` holds the empty project-alias and newsletter lists.
+- `brain-only/` is a second instance that declares only the brain engine, for
+  the onboarding hub's brain-only path; `bin/mark-repository-boundaries` makes
+  it a repository too, and `SYNTOPICA_DATA=$PWD/brain-only` selects it.
 
 MIT, see `LICENSE`.

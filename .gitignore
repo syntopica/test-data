@@ -1,3 +1,5 @@
 # State the engines derive at run time; absence is normal on a fresh clone.
 /atrium/
 /conversations/
+/brain-only/atrium/
+/brain-only/conversations/

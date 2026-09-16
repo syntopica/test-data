@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "instanceId": "synthetic-brain-only",
+  "brain": {
+    "pages": ["brain/notes"],
+    "sources": "brain/captures",
+    "index": "brain/index.md",
+    "ledger": "brain/.ingest"
+  },
+  "engines": {
+    "brain": {
+      "path": "../engines/brain",
+      "apiVersion": 1
+    }
+  }
+}

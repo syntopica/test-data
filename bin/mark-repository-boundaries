@@ -8,7 +8,7 @@
 # clone lacks them; run this once after cloning.
 set -eu
 cd "$(dirname "$0")/.."
-for boundary in clips engines/brain engines/clips; do
+for boundary in clips engines/brain engines/clips brain-only; do
   [ -e "$boundary/.git" ] || git init -q "$boundary"
 done
-mkdir -p atrium conversations
+mkdir -p atrium conversations brain-only/atrium brain-only/conversations
