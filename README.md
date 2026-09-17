@@ -20,11 +20,16 @@ bin/mark-repository-boundaries
 The script recreates the `.git` markers in `clips/`, `engines/brain/` and
 `engines/clips/` that git cannot carry in a clone (git refuses to track a path
 with a `.git` component); the engines stop their upward instance search at
-those boundaries. Then point either engine at the directory:
+those boundaries.
+
+This repository is a fixture, not an installed engine bundle and not a
+conversation archive: `engines/` holds schema stubs, so nothing in it is
+runnable. Run your own engine checkouts against this directory, replacing the
+two absolute paths below, and pass it with `--data` rather than standing in it:
 
 ```bash
-SYNTOPICA_DATA=$PWD ~/p/brain/bin/brain doctor
-SYNTOPICA_DATA=$PWD clips doctor
+/absolute/path/to/brain/bin/brain --data "$PWD" doctor
+/absolute/path/to/clips/clips.sh --data "$PWD" doctor
 ```
 
 `verification/` keeps the last recorded doctor output from both engines.
